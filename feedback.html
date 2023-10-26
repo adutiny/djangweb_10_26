@@ -1,0 +1,103 @@
+{% load static %}
+<html>
+<link href="{% static 'newyear/styles.css' %}" rel="stylesheet">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<style>
+    body {
+        max-width: 100%;
+        padding: 20px;
+    }
+</style>
+<nav style="text-align: center;">
+  <ul>
+    <li style="display: inline-block; margin-right: 30px;">
+      <a href="/" style="font-size: 1.2rem; color: white; font-family: sans-serif;">Home</a>
+    </li>
+    <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/about" style="font-size: 1.2rem; color: #FFF;">About</a></li>
+    <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/contact_form" style="font-size: 1.2rem; color: #FFF;">Contact</a></li>
+    <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/faq" style="font-size: 1.2rem; color: white ;">FAQ</a></li>
+    <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/feedback" style="font-size: 1.2rem; color: #FFF;">Feedback</a></li>
+    <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/signup" style="font-size: 1.2rem; color: #FFF;">Signup</a></li>
+    <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/login" style="font-size: 1.2rem; color: #FFF;">Login</a></li>
+    <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/prompt" style="font-size: 1.2rem; color: #FFF;">Prompt Training</a></li>
+    <!-- <li style="display: inline-block; margin-right: 30px;"><a href="/login" style="font-size: 1.2rem; color: #FFF;">Login to your Account</a></li> -->
+    <!--<li style="display: inline-block; margin-right: 30px;"><a href="/sign-up" style="font-size: 1.2rem; color: #FFF;">Sign Up!</a></li> -->
+  </ul>
+</nav>
+ 
+
+<h1 style="font-family: sans-serif;">We'd appreciate you advice and help</h1>
+
+
+
+
+ 
+    <title>Questionnaire</title>
+
+    <style>
+        input[type=text], select {
+          color: white;
+        }
+      </style>
+     
+  <body>
+
+ 
+
+
+
+
+    
+
+
+    <div style="margin: 0 auto; width: max-content;">
+    <form action="submit_form" method="POST">
+      {% csrf_token %}
+        
+        
+        <label>Name: <input type="name" name="name" /></label><br><br>
+         
+        <label>Email: <input type="email" name="email" /></label><br /><br>
+        
+        <label>Do you trust AI to interact with your customers or leads? <input type="phone" name="leads" /></label><br /><br>
+        <label>If you answered no, what are your concerns? <input type="phone" name="concerns" /></label><br /><br>
+        <label>1 out of 10.. 10 being the most accurate. How accurate is AI? <input type="phone" name="accurate_is_AI" /></label><br /><br>
+        <label>How much would you pay per month for an AI-powered sales tool that automatically handles your<br>
+        incoming emails and website leads? This tool is more accurate, faster, and available 24/7. <input type="phone" name="tool" /></label><br /><br>
+    
+        <label>Comments, Questions, Compliments: <input type="phone" name="message22" /></label><br /><br>
+
+        <label for="opt-in">
+
+          Check the box to opt in to receive emails<br>  from time to time about updates on our products, services, and promotions,<br>as well as helpful tips and advice from AI Connect Sales :</label>
+        <input type="checkbox" id="opt-in" name="opt-in"> <br><br>
+
+        <input type="submit" value="Submit" />
+    </form>
+    </div>
+
+
+
+
+
+    
+    </form>
+  </body>
+</html>
+<form action="" method="post">
+ 
+  {{ form }}
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+
+
+
+
+     
+
+
+  
