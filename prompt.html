@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+
+
+<head>
+
+  <Title>Earthdog AI</Title>
+
+   
+     
+  <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        {% load static %}
+<link href="{% static 'newyear/styles.css' %}" rel="stylesheet">
+<head><meta name="viewport" content="width=device-width, initial-scale=1.0"></head>
+<style>
+    body {
+        max-width: 100%;
+        padding: 20px;
+    }
+</style>
+        
+    </head 
+
+     <nav style="text-align: center;">
+        <ul>
+            <li style="display: inline-block; margin-right: 30px;">
+                <a href="/" style="font-size: 1.2rem; color: white; font-family: sans-serif;">Home</a>
+              </li>
+              <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/about" style="font-size: 1.2rem; color: #FFF;">About</a></li>
+              <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/contact_form" style="font-size: 1.2rem; color: #FFF;">Contact</a></li>
+              <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/faq" style="font-size: 1.2rem; color: white ;">FAQ</a></li>
+              <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/feedback" style="font-size: 1.2rem; color: #FFF;">Feedback</a></li>
+              <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/signup" style="font-size: 1.2rem; color: #FFF;">Signup</a></li>
+              <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/login" style="font-size: 1.2rem; color: #FFF;">Login</a></li>
+              <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/prompt" style="font-size: 1.2rem; color: #FFF;">Prompt Training</a></li>
+          <!--<li style="display: inline-block; margin-right: 30px;"><a href="/sign-up" style="font-size: 1.2rem; color: #FFF;">Sign Up!</a></li> -->
+        </ul>
+      </nav>
+
+
+
+<body>
+  <div style="color: white;">
+    
+
+    
+	<h1 style="color:yellowgreen; font-family: sans-serif;">Please be concise and clear in your answers.<br> We will take your answers and the information on<br> your website to train your AI Tools. <br> So accuracy is critical.</h1>
+
+
+
+
+	<!DOCTYPE html>
+	<html>
+	  <head>
+		<title>Questionnaire</title>
+	
+		<style>
+			input[type=text], select {
+			  color: white;
+			}
+		  </style>
+		</head>
+	  </head>
+	  <body>
+	
+	 
+	
+	
+	
+	
+		
+	
+	
+		<div style="margin: 0 auto; width: max-content;">
+		<form action="submit_form1" method="POST">
+			
+			
+            <label>Enter your company name please <input type="text" name="name" /></label><br /><br>
+			<label>Enter the company phone number <input type="phone" name="phone" /></label><br /><br>
+			<label>Enter the company address <input type="text" name="address" /></label><br /><br>
+			<label>Enter the company email <input type="email" name="email" /></label><br /><br>
+			<label>Please enter your website address <input type="text" name="website" /></label><br /><br>
+			
+            <label>Enter your email provider Google Workspace (Gsuite),
+                Microsoft 365,
+                Zoho Workplace,
+                ProtonMail,
+                IceWarp or any other provider<input type="Text" name="provider" /></label><br /><br>
+            <label>If you know your API for you email then enter it here, if not enter unknown and we<br> will contact you for next steps<input type="text" name="API" /></label><br /><br>    
+			<label>Enter  your most asked question <input type="text" name="Q1" /></label><br /><br>
+			<label>Enter a concise answer to your most asked question <input type="phone" name="A1" /></label><br /><br>
+
+
+            <label>Enter  your 2nd most asked question <input type="text" name="Q2" /></label><br /><br>
+			<label>Enter a concise answer to your 2nd most asked question <input type="phone" name="A2" /></label><br /><br>
+
+
+            <label>Enter  your 3rd  most asked question <input type="text" name="Q3" /></label><br /><br>
+			<label>Enter a concise answer to your 3rd most asked question <input type="phone" name="A3" /></label><br /><br>
+
+            <label>Enter  your 4th most asked question <input type="text" name="Q4" /></label><br /><br>
+			<label>Enter a concise answer to your 4th most asked question <input type="phone" name="A4" /></label><br /><br>
+
+            <label>Enter  your 5th most asked question <input type="text" name="Q5" /></label><br /><br>
+			<label>Enter a concise answer to your 5th most asked question <input type="phone" name="A5" /></label><br /><br>
+
+			<label>Enter  your 6th most asked question <input type="text" name="Q6" /></label><br /><br>
+			<label>Enter a concise answer to your 6th most asked question <input type="phone" name="A6" /></label><br /><br>
+
+
+
+
+
+
+
+
+			 
+			
+			<input type="submit" value="Submit" />
+		</form>
+		</div>
+	
+	
+	
+	
+	
+		
+		</form>
+	  </body>
+	</html>
+	
+	
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+     </form>

@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+{% load static %}
+
+<link href="{% static 'newyear/styles.css' %}" rel="stylesheet">
+
+<head>
+  <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          
+      </head>
+       
+
+  
+
+  
+     
+
+    <Title>AI Connect Sales</Title>
+  
+    <nav style="text-align: center;">
+      <ul>
+        <li style="display: inline-block; margin-right: 30px;">
+          <a href="/" style="font-size: 1.2rem; color: white; font-family: sans-serif;">Home</a>
+        </li>
+        <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/about" style="font-size: 1.2rem; color: #FFF;">About</a></li>
+        <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/contact_form" style="font-size: 1.2rem; color: #FFF;">Contact</a></li>
+        <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/faq" style="font-size: 1.2rem; color: white ;">FAQ</a></li>
+        <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/feedback" style="font-size: 1.2rem; color: #FFF;">Feedback</a></li>
+        <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/signup" style="font-size: 1.2rem; color: #FFF;">Signup</a></li>
+        <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/login" style="font-size: 1.2rem; color: #FFF;">Login</a></li>
+        <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/prompt" style="font-size: 1.2rem; color: #FFF;">Prompt Training</a></li>
+        <li style="display: inline-block; margin-right: 30px; font-family: sans-serif;"><a href="/aiconnectwebsite/client_interface" style="font-size: 1.2rem; color: #FFF;">Client_Interface</a></li>
+        <!-- <li style="display: inline-block; margin-right: 30px;"><a href="/login" style="font-size: 1.2rem; color: #FFF;">Login to your Account</a></li>
+        <li style="display: inline-block; margin-right: 30px;"><a href="/sign_up" style="font-size: 1.2rem; color: #FFF;">Sign Up!</a></li> -->
+      </ul>
+    </nav>
+
+   
+  
+ 
+  
+       
+  
+  
+    
+  
+  
+  
+  <body>
+    <div style ="color:yellowgreen;">
+      
+  
+      
+  
+   <h2 style="font-family: sans-serif;">Let's Chat</h2>
+  
+   {% if response %}
+      
+      <p><span id="user_name"></span>: {{user_input}}</p>
+      <p style="font-family: sans-serif;">AI Connect Sales: {{response}}</p>
+      <br>
+      <script>
+        document.getElementById('user_name').innerHTML = localStorage.getItem('name');  
+      </script>
+    
+      {% else %}
+      
+  
+  
+  <label for="name" style="font-family: sans-serif;">We are AI Connect, What's your name?</label>
+  
+  
+  
+  <input type="text" id="name" placeholder="Type your name please">
+  
+  <p id="first_response"></p>
+  
+  <script>
+    document.getElementById('name').addEventListener('keypress', function(e) {
+      if (e.keyCode === 13) {
+        let name = document.getElementById('name').value;
+        document.getElementById('first_response').innerHTML = 'Hi ' + name + '! How can I help you today?';
+        localStorage.setItem('name', name);
+      }
+    });
+  </script>
+  
+  
+  
+  
+      <p id="first_response" style="color:white;"></p>
+      
+      {% endif %}
+    </div>
+    
+    
+    
+      <form action="/response" onsubmit="return false;">
+        <style>
+          p {
+            color: white;
+          }
+        </style>
+        
+          <p style="color:yellowgreen;font-family: sans-serif;">Ask me a Question</p><br>
+    
+        <textarea placeholder='Hi type your questions here' name="res" rows="2" cols="30" onkeypress="if(event.keyCode === 13) this.form.submit()"></textarea>
+         
+        <h3 style="color:yellowgreen;"style="font-family: sans-serif;"> If you are interested in learning more about our AI products, please request a consultation . </h3><br><br>  
+      <br><br>  
+      <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 20px;">Book FREE Consultation</a><br><br><br> 
+    </form>
+  </form> 
+  
+  
+     
+  <div class="container">
+    <div style="text-align:center;">
+      <h1 style="color:white;font-family: sans-serif;">Welcome to AI Connect Sales</h1>
+      <h3 style="color:white;font-family: sans-serif;"> Our AI-powered sales tools answer immediately and accurately, so your customers get a accurate and relevant response within seconds of their inquiry.<br><br> 
+        * SAVES MONEY: Imagine paying someone $49.99 a month to answer your incoming emails or incoming phone calls or chatting online. <br>
+        * SAVES TIME: AI generates accurate responses much faster than a human, so you can save time by letting it do the work.<br>
+        * IMPROVES CUSTOMER SERVICE: Faster and more accurate than employees. Which improves customer satisfaction.<br>
+        * INCREASES PRODUCTIVITY: AI frees up your time so you can focus on working with ready to buy clients and other important goals.<br>
+        * ACCURATE: Our AI chatbot is up to 97% accurate. According to recent studies, depending on the individual, humans are anywhere from 60% to 90% accurate.<br>
+        * INDIVIDUAL PERSONAL RESPONES: Answers accurately and specific questions asked by your customers. Not a template one size impersonal reply. 
+        .<br></p></h3>
+    </div><br><br>
+
+
+
+    <h2 style="color:yellowgreen;font-family: sans-serif;">AI auto Email replies</h2>
+    <h2 style="color:yellowgreen;font-family: sans-serif;">Available Now!</h2>
+      
+    <p style="color:white;font-family: sans-serif;"> Answers website contacts, incoming emails either all emails or specific emails by subject<br>
+     The AI will analyze the context of your emails and generate responses that are relevant and accurate.<br>
+     Works 24/7: The AI is always available to generate responses, even when you're not.<br>
+      <p style="color:white;font-weight:bold;font-family: sans-serif;">50 AI Email communications a day for  $49.99 a month...more communications available @ .10 each.<br>
+        <h3 style="color:yellowgreen;font-family: sans-serif;"> If you are interested in learning more about our AI Email, please request a FREE demo. </h3><br> 
+        <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 20px;font-family: sans-serif;">Book FREE Consultation</a><br><br><br>  
+              
+        <h2 style="color:yellowgreen;font-family: sans-serif;">Text Messaging (NOT AI)</h2>
+        <h2 style="color:yellowgreen;font-family: sans-serif;">Available Now!</h2>
+        <p style="color:white;font-weight:bold;font-family: sans-serif;">50 AI Text communications a day for $29.99 a month... more avaiable @ .10 each. Send marketing texts<br>
+          Market to your existing clients with text messaging </p><br>
+           <h3 style="color:yellowgreen;font-family: sans-serif;"> If you are interested in learning more about our Text, please request a FREE demo. </h3><br> 
+           <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 20px;font-family: sans-serif;">Book FREE Consultation</a><br><br><br>
+          
+    
+           <h2 style="color:yellowgreen;font-family: sans-serif;">AI Text</h2>
+           <h2 style="color:yellowgreen;font-family: sans-serif;">Coming Soon!</h2>
+           <p style="color:white;font-weight:bold;font-family: sans-serif;">50 AI Text communications a day for $59.99 a month... more avaiable @ .10 each. Let AI Test answer your phone calls<br>
+             When people call into your company AI Text will answer the phone and ask the caller what they need help with.<br>
+             AI Text will then text you the callers name and phone number and what they need help with.<br>
+              <h3 style="color:yellowgreen;font-family: sans-serif;"> If you are interested in learning more about our AI Text, please request a FREE demo. </h3><br> 
+              <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 20px;font-family: sans-serif;">Book FREE Consultation</a><br><br><br>
+             
+       
+
+    <h2 style="color:yellowgreen;font-family: sans-serif;">AI Chatbot for your website</h2>
+    <h2 style="color:yellowgreen;font-family: sans-serif;">Coming Soon!</h2>
+      <p style="color:white;font-weight:bold;font-family: sans-serif;">50 AI Chatbot communications a day $49.99 a month...more avaiable @ .10 each.<br>
+        Our chatbot will anwer questions about your business 24/7 and gather contact info.<br>
+        Try our chatbot above, it is trained to our company just like we would train yours to your business.<br>
+      <h3 style="color:yellowgreen;font-family: sans-serif;"> If you are interested in learning more about our AI Chatbot, please request a FREE demo. </h3><br> 
+      <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 20px;font-family: sans-serif;">Book FREE Consultation</a><br><br>
+  
+  
+  
+  
+      <h2 style="color:yellowgreen;font-family: sans-serif;">AI Text</h2>
+      <h2 style="color:yellowgreen;font-family: sans-serif;">Coming Soon!</h2>
+      <p style="color:white;font-weight:bold;font-family: sans-serif;">50 AI Text communications a day for $59.99 a month... more avaiable @ .10 each. Let AI Test answer your phone calls<br>
+        When people call into your company AI Text will answer the phone and ask the caller what they need help with.<br>
+        AI Text will then text you the callers name and phone number and what they need help with.<br>
+         <h3 style="color:yellowgreen;font-family: sans-serif;"> If you are interested in learning more about our AI Text, please request a FREE demo. </h3><br> 
+         <a href="https://calendar.app.google/ya5UzYYs567M49WW6" class="button" style="color: yellowgreen; font-size: 20px;font-family: sans-serif;">Book FREE Consultation</a><br><br><br>
+        
+  
+  </html>
+  <form action="" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+ </form>
+
+ </html>
+    
+   
+ 
+  
+   
+  
+    
+   
+   
